@@ -1,0 +1,18 @@
+Overview: The purpose of the analysis is to use a deep learning model to assist the nonprofit foundation, Alphabet Soup, in selecting funding applicants with a higher likelihood of success. The analysis involves utilizing a dataset of 34,000 organizations that have previously received funding and classifying future applicants based on their potential for success.
+
+Results:
+
+Data Preprocessing:
+
+Target Variable: The target variable for the model is "IS_SUCCESSFUL," which indicates whether an organization was successful in utilizing the funding.
+Features Variables: All columns in the dataset, except for "EIN" and "NAME," are considered as features for the model. These features provide relevant information about each organization's characteristics and activities.
+Variables to Remove: The "STATUS" variable was removed from the input data as it does not serve as either a target or a feature in this classification problem.
+Compiling, Training, and Evaluating the Model:
+
+Neural Network Configuration: Various configurations were experimented with to optimize the model's performance. The final configuration consists of two hidden layers, with the first layer having 60-80 neurons, the second layer having 30 neurons, and an output layer.
+Activation Functions: The activation functions for the model's layers were selected based on experimentation and analysis of the data.
+Model Performance: Despite trying multiple configurations, the model's accuracy did not exceed 73%, falling short of the target 75% accuracy.
+Attempts to Improve Performance: Different approaches were attempted to improve the model's performance, including changing binning for categorical variables, removing certain columns, and trying various combinations of layers and neurons. However, these attempts did not lead to the desired accuracy level.
+Summary: The deep learning neural network model applied to the classification problem of selecting successful funding applicants did not achieve the desired level of performance. Despite various attempts at optimization, the model's accuracy remained below the target threshold.
+
+Recommendation: Given the limitations of the neural network model in achieving the desired accuracy, I recommend exploring alternative approaches to solve this classification problem. One possible solution is to perform Principal Component Analysis (PCA) on the dataset to reduce its dimensionality while preserving important information. Afterward, applying a clustering algorithm like k-means can help create distinct classifications for funding applicants based on similarities in their characteristics and activities. This unsupervised learning approach may provide better insights into potential applicant groups and their chances of success, helping Alphabet Soup make more informed funding decisions.
